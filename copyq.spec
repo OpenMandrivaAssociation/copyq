@@ -1,7 +1,7 @@
 Summary:	Advanced clipboard manager
 Name:		copyq
 Version:	1.8.2
-Release:	1
+Release:	2
 License:	GPLv3
 Group:		Accessibility
 Url:		http://sourceforge.net/projects/copyq/
