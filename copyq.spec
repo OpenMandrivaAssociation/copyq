@@ -1,19 +1,20 @@
 Summary:	Advanced clipboard manager
 Name:		copyq
-Version:	1.8.2
-Release:	2
+Version:	2.4.7
+Release:	1
 License:	GPLv3
 Group:		Accessibility
 Url:		http://sourceforge.net/projects/copyq/
 Source0:	http://sourceforge.net/projects/copyq/files/%{name}-%{version}.tar.gz
+Patch0:		copyq-2.0.1-install.patch
+
 BuildRequires:	cmake
 BuildRequires:	imagemagick
 BuildRequires:	qt4-devel
 
 %description
-CopyQ is advanced clipboard manager with searchable and editable history with
+CopyQ is advanced clipboard manager with search-able and editable history with
 support for image formats, command line control and more.
-
 Features
 - Supports Windows and Linux.
 - Store text, HTML, images and any other custom format.
@@ -31,22 +32,29 @@ Features
 - Apply custom commands on selected items or automatically when new matching
   clipboard content is available.
 
-%prep
-%setup -q
-# Fix plugins path
-sed -i s,"/lib/","/%{_lib}/",g CMakeLists.txt
-sed -i s,\"lib\",\"%{_lib}\",g ./src/itemfactory.cpp
-
-%build
-%cmake_qt4
-%make
-
-%install
-%makeinstall_std -C build
-
 %files
 %doc AUTHORS LICENSE
 %{_bindir}/%{name}
 %{_libdir}/%{name}
 %{_datadir}/applications/%{name}.desktop
+%{_datadir}/appdata/copyq.appdata.xml
+%{_datadir}/%{name}/themes/*.ini
+%{_datadir}/%{name}/translations/%{name}*.qm
 %{_iconsdir}/hicolor/*/apps/%{name}*.svg
+%{_iconsdir}/hicolor/*/apps/%{name}*.png
+
+
+#-----------------------------------------------------------------------------
+
+%prep
+%setup -q
+%patch0 -p0
+find . -type f -exec chmod -x {} \;
+
+%build
+export CFLAGS="%{optflags} -ffast-math"
+%cmake -DLIBDIR=%{_lib}
+%make
+
+%install
+%makeinstall_std -C build

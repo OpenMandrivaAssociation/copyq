@@ -1,2 +1,7 @@
+removed_sources:
+  copyq-1.8.2.tar.gz: ebab864963497e5db693197b087f57ed06f4e2cf
+  copyq-2.0.1.tar.gz: a4cd4eb4d4873cb9f986a3b46725b55535ac8270
+  copyq-2.1.0.tar.gz: c0c3f1be29477ba3e24b2227270984dba659bade
+  copyq-2.4.4.tar.gz: 3ec025eea326aceb70579b9104d22060c3f45645
 sources:
-  "copyq-1.8.2.tar.gz": ebab864963497e5db693197b087f57ed06f4e2cf
+  copyq-2.4.7.tar.gz: 555cd66eb5ed896267d3ed9aa725e0b3f48cd7f7

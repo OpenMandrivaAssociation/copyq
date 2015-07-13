@@ -1,0 +1,15 @@
+┌─[ symbianflo @ symbianflo ] - [ Mandrivausers.ro ] 
+└─[ MRB:aint-no-shit $]: diff -u CMakeLists.txt.orig CMakeLists.txt
+=========================================================================
+--- CMakeLists.txt.orig 2014-01-26 10:19:54.000000000 +0100
++++ CMakeLists.txt      2014-01-26 19:12:18.862528108 +0100
+@@ -7,7 +7,7 @@
+ OPTION(WITH_PLUGINS "Compile plugins" ON)
+ # Linux-specific options
+ if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+-    set(PLUGIN_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}/${CMAKE_SHARED_MODULE_PREFIX}/copyq/plugins" CACHE PATH "Install path for plugins")
++    set(PLUGIN_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}/${LIBDIR}/copyq/plugins" CACHE PATH "Install path for plugins")
+     set(ICON_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/apps" CACHE PATH "Install path for icons")
+     set(ICON_INSTALL_PREFIX_TEMPLATE "${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/%SIZE%/apps" CACHE PATH "Install path for icons (%SIZE% is icon size)")
+     set(THEME_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}/share/copyq/themes" CACHE PATH "Install path for themes")
+     set(DESKTOP_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}/share/applications" CACHE PATH "Install path for \"copyq.desktop\"")
