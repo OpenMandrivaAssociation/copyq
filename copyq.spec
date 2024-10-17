@@ -4,7 +4,7 @@ Version:	2.4.7
 Release:	1
 License:	GPLv3
 Group:		Accessibility
-Url:		http://sourceforge.net/projects/copyq/
+Url:		https://sourceforge.net/projects/copyq/
 Source0:	http://sourceforge.net/projects/copyq/files/%{name}-%{version}.tar.gz
 Patch0:		copyq-2.0.1-install.patch
 
