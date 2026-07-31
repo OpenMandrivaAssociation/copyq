@@ -14,7 +14,7 @@
 # the short commit tag should be 7 characters long
 
 Name:           copyq
-Version:        9.1.0
+Version:        16.0.0
 Release:        %{?commit_date:~0.%{commit_date}.}1
 Summary:        Clipboard manager with advanced features
 Group:          Utilities
