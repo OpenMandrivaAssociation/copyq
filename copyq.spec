@@ -44,6 +44,10 @@ BuildRequires: cmake(Qt6Svg)
 BuildRequires: cmake(Qt6Tools)
 BuildRequires: cmake(Qt6Test)
 BuildRequires: cmake(Qt6WaylandClient)
+BuildRequires: cmake(Qt6Network)
+BuildRequires: cmake(Qt6Xml)
+BuildRequires: cmake(Qca-qt6)
+BuildRequires: cmake(Qt6Keychain)
 BuildRequires: pkgconfig(appstream-glib)
 BuildRequires: pkgconfig(xtst)
 BuildRequires: pkgconfig(xfixes)
@@ -64,6 +68,7 @@ desktop-file-validate $RPM_BUILD_ROOT%{_datadir}/applications/com.github.hluk.%{
 %{_libdir}/%{name}/
 %{_datadir}/metainfo/com.github.hluk.%{name}.appdata.xml
 %{_datadir}/applications/com.github.hluk.%{name}.desktop
+%{_datadir}/gnome-shell/extensions/copyq-clipboard@hluk.github.com/
 %{_datadir}/bash-completion/completions/%{name}
 %{_datadir}/icons/hicolor/*/apps/%{name}*.png
 %{_datadir}/icons/hicolor/*/apps/%{name}*.svg
