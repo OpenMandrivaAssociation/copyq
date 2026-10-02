@@ -48,6 +48,7 @@ BuildRequires: cmake(Qt6Network)
 BuildRequires: cmake(Qt6Xml)
 BuildRequires: cmake(Qca-qt6)
 BuildRequires: cmake(Qt6Keychain)
+BuildRequires: miniaudio-devel
 BuildRequires: pkgconfig(appstream-glib)
 BuildRequires: pkgconfig(xtst)
 BuildRequires: pkgconfig(xfixes)
