@@ -68,7 +68,7 @@ desktop-file-validate $RPM_BUILD_ROOT%{_datadir}/applications/com.github.hluk.%{
 %license LICENSE
 %{_bindir}/%{name}
 %{_libdir}/%{name}/
-%{_datadir}/metainfo/com.github.hluk.%{name}.appdata.xml
+%{_datadir}/metainfo/com.github.hluk.%{name}.metainfo.xml
 %{_datadir}/applications/com.github.hluk.%{name}.desktop
 %{_datadir}/gnome-shell/extensions/copyq-clipboard@hluk.github.com/
 %{_datadir}/bash-completion/completions/%{name}
