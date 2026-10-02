@@ -15,7 +15,7 @@
 
 Name:           copyq
 Version:        16.0.0
-Release:        %{?commit_date:~0.%{commit_date}.}1
+Release:        %{?commit_date:~0.%{commit_date}.}2
 Summary:        Clipboard manager with advanced features
 Group:          Utilities
 License:        GPLv3
